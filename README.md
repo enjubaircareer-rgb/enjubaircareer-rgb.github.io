@@ -1,2 +1,110 @@
 # Infographics
 This web page is developed as a part of PhD course work. I will present some infographics here.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Funnel of Ethical Review</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* slate-50 */
+        }
+        .funnel-segment {
+            position: relative;
+            clip-path: polygon(0 0, 100% 0, 85% 100%, 15% 100%);
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 600;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+        }
+        .annotation {
+            position: absolute;
+            width: 180px;
+            font-size: 0.8rem;
+            line-height: 1.2;
+        }
+        .annotation-line {
+            position: absolute;
+            width: 50px;
+            height: 2px;
+            background-color: #64748b; /* slate-500 */
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen p-4">
+    <div class="w-full max-w-4xl mx-auto">
+        <header class="text-center mb-12">
+            <h1 class="text-3xl md:text-4xl font-bold text-slate-800">The Funnel of Ethical Review</h1>
+            <p class="mt-2 text-lg text-slate-500">Refining Research Ideas to Ensure Integrity and Safety</p>
+        </header>
+
+        <main class="relative flex justify-center py-10">
+            <div class="w-64">
+                <!-- Segment 1 -->
+                <div class="w-full text-center mb-4">
+                    <p class="font-semibold text-slate-700">The Research Proposal</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mx-auto text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 13l-7 7-7-7m14-4l-7 7-7-7" />
+                    </svg>
+                </div>
+
+                <!-- Funnel Body -->
+                <div class="w-full">
+                    <div class="funnel-segment bg-indigo-500" style="width: 100%;">
+                        Respect for Persons
+                    </div>
+                    <div class="funnel-segment bg-sky-500" style="width: 85%; margin-left: 7.5%;">
+                        Beneficence
+                    </div>
+                    <div class="funnel-segment bg-emerald-500" style="width: 70%; margin-left: 15%;">
+                        Justice
+                    </div>
+                </div>
+
+                 <!-- Result -->
+                <div class="w-full text-center mt-4">
+                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mx-auto text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                    </svg>
+                    <div class="mt-2 bg-slate-700 text-white font-semibold py-3 px-6 rounded-lg inline-block">
+                        Approved Ethical Research
+                    </div>
+                </div>
+            </div>
+
+            <!-- Annotations -->
+            <div class="absolute top-0 left-0 w-full h-full">
+                <!-- Annotation for Respect -->
+                <div class="annotation text-right" style="top: 100px; left: 0px;">
+                    <strong class="text-indigo-700">Mitigates Coercion</strong>
+                    <p class="text-slate-600">Ensures informed consent is freely given.</p>
+                </div>
+                <div class="annotation-line" style="top: 120px; left: 180px;"></div>
+                
+                <!-- Annotation for Beneficence -->
+                 <div class="annotation text-left" style="top: 180px; right: 0px;">
+                    <strong class="text-sky-700">Prevents Harm</strong>
+                    <p class="text-slate-600">Minimizes psychological, social, and physical risks.</p>
+                </div>
+                <div class="annotation-line" style="top: 200px; right: 180px;"></div>
+
+                <!-- Annotation for Justice -->
+                <div class="annotation text-right" style="top: 260px; left: 0px;">
+                    <strong class="text-emerald-700">Avoids Exploitation</strong>
+                    <p class="text-slate-600">Guarantees fair selection of participants.</p>
+                </div>
+                <div class="annotation-line" style="top: 280px; left: 180px;"></div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
